@@ -8,7 +8,7 @@ html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
 }
-/*dd*/
+
 *,
 *::before,
 *::after {

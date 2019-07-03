@@ -36,7 +36,7 @@ namespace MVC_5Temp.Controllers
             return View(category);
         }
 
-        // GET: Categories/Create
+        // GET: Categories/Create/mytest
         public ActionResult Create()
         {
             return View();

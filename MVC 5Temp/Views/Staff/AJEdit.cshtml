@@ -1,16 +1,10 @@
 ﻿@model MVC_5Temp.Models.Customer
-
-@{
-    ViewBag.Title = "Edit";
-}
-
-<h2>Edit</h2>
-
-
-@using (Html.BeginForm())
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+@using (Ajax.BeginForm("AJEdit", "Staff", new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "MyData", InsertionMode = InsertionMode.Replace }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Customer</h4>
         <hr />
@@ -60,7 +54,3 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

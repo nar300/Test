@@ -127,7 +127,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
-    <Compile Include="Controllers\PersonsController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Data\CustomerDBContext.cs" />
@@ -237,11 +236,6 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Persons\Create.cshtml" />
-    <Content Include="Views\Persons\Delete.cshtml" />
-    <Content Include="Views\Persons\Details.cshtml" />
-    <Content Include="Views\Persons\Edit.cshtml" />
-    <Content Include="Views\Persons\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Categories\Create.cshtml" />
     <Content Include="Views\Categories\Delete.cshtml" />
@@ -257,6 +251,9 @@
     <Content Include="Views\Staff\Create.cshtml" />
     <Content Include="Views\Staff\Delete.cshtml" />
     <Content Include="Views\Staff\Edit.cshtml" />
+    <Content Include="Views\Staff\Myclients.cshtml" />
+    <Content Include="Views\Staff\AjCreate.cshtml" />
+    <Content Include="Views\Staff\AJEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,13 +1,12 @@
 ﻿@model IEnumerable<MVC_5Temp.Models.Customer>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
-
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
 <p>
-    @Html.ActionLink("Create New", "Create")
+
+    <a class="btn btn-primary" @Ajax.ActionLink("Create New", "AjCreate", new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "MyForm", InsertionMode = InsertionMode.Replace })</a>
+
+
 </p>
 <table class="table">
     <tr>
@@ -42,9 +41,11 @@
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.id }) |*@
                 @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })|
+                @Ajax.ActionLink("AjaxDelete", "AjDelete", new { id = item.id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "MyData", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-danger" }) |
+                @Ajax.ActionLink("Update", "AJEdit", new { id = item.id }, new AjaxOptions() { HttpMethod = "Get", UpdateTargetId = "MyForm", InsertionMode = InsertionMode.Replace }  )
             </td>
         </tr>
     }
